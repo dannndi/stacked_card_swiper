@@ -1,39 +1,73 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# stacked_card_swiper
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+A Flutter package for creating smooth stacked card swiper with gesture support, layered animations, and full control over swipe behavior.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+---
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## ✨ Key Features
+- Smooth stacked card animations
+- Horizontal & vertical swipe support
+- Fully customizable card UI
+- Works with static data and dynamic lists
 
-## Features
+---
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+## 🚀 Example
+| On Static Layout | On List Layout (scroll able) |
+|----------|----------|
+| <img src="https://raw.githubusercontent.com/dannndi/stacked_card_swiper/main/example/assets/example/example_static.gif" width="720" alt="Example"> | <img src="https://raw.githubusercontent.com/dannndi/stacked_card_swiper/main/example/assets/example/example_list.gif" width="720" alt="Example"> |
 
-## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
 
-## Usage
+---
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+## 📱 Live Demo
+https://stacked-card-swiper.vercel.app/
 
-```dart
-const like = 'sample';
+---
+
+## 📦 Installation
+Add this package to your `pubspec.yaml`:
+
+```yaml
+dependencies:
+  stacked_card_swiper: ^latest
 ```
 
-## Additional information
+Then run:
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```bash
+flutter pub get
+```
+
+Import it in your Dart file:
+
+```dart
+import 'package:stacked_card_swiper/stacked_card_swiper.dart';
+```
+
+---
+
+## 🚀 How To Use
+
+### Basic Usage
+
+```dart
+StackedCardSwiper(
+  values: Colors.primaries.take(4).toList(),
+  swipeAxis: Axis.horizontal,
+  onChanged: (color) {
+    // triggered when top card is swiped
+  },
+  builder: (context, color) {
+    return Container(
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.circular(16),
+      ),
+      alignment: Alignment.center,
+      child: const Text("Your Content"),
+    );
+  },
+);
+```
