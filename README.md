@@ -22,8 +22,7 @@ A Flutter package for creating smooth stacked card swiper with gesture support, 
 ---
 
 ## 📱 Live Demo
-https://stacked-card-swiper.vercel.app/
-
+[Web Demo](https://stacked-card-swiper.vercel.app/)
 ---
 
 ## 📦 Installation
