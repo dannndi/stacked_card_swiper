@@ -1,7 +1,9 @@
 name: stacked_card_swiper
-description: "A new Flutter package project."
+description: "A Flutter package for creating smooth stacked card swiper with gesture support, layered animations, and full control over swipe behavior. Optimized for performance and clean integration."
 version: 0.0.1
-homepage:
+homepage: https://github.com/dannndi/stacked_card_swiper
+repository: https://github.com/dannndi/stacked_card_swiper
+license: MIT
 
 environment:
   sdk: ^3.8.1
